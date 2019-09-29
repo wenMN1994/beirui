@@ -244,9 +244,9 @@ insert into sys_menu values('1053', '状态修改', '110', '5', '#', '',  'F', '
 insert into sys_menu values('1054', '任务详细', '110', '6', '#', '',  'F', '0', 'monitor:job:detail',              '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
 insert into sys_menu values('1055', '任务导出', '110', '7', '#', '',  'F', '0', 'monitor:job:export',              '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
 -- 代码生成按钮
-insert into sys_menu values('1056', '生成查询', '114', '1', '#', '',  'F', '0', 'tool:gen:list',    '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
-insert into sys_menu values('1057', '生成修改', '114', '2', '#', '',  'F', '0', 'tool:gen:edit',    '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
-insert into sys_menu values('1058', '生成删除', '114', '3', '#', '',  'F', '0', 'tool:gen:remove',  '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
+insert into sys_menu values('1056', '生成查询', '114', '1', '#', '',  'F', '0', 'tool:gen:list',     '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
+insert into sys_menu values('1057', '生成修改', '114', '2', '#', '',  'F', '0', 'tool:gen:edit',     '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
+insert into sys_menu values('1058', '生成删除', '114', '3', '#', '',  'F', '0', 'tool:gen:remove',   '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
 insert into sys_menu values('1059', '预览代码', '114', '4', '#', '',  'F', '0', 'tool:gen:preview',  '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
 insert into sys_menu values('1060', '生成代码', '114', '5', '#', '',  'F', '0', 'tool:gen:code',     '#', 'admin', '2018-03-16 11-33-00', 'ry', '2018-03-16 11-33-00', '');
 
@@ -416,6 +416,7 @@ create table sys_oper_log (
   oper_ip           varchar(50)     default ''                 comment '主机地址',
   oper_location     varchar(255)    default ''                 comment '操作地点',
   oper_param        varchar(2000)   default ''                 comment '请求参数',
+  json_result       varchar(2000)   default ''                 comment '返回参数',
   status            int(1)          default 0                  comment '操作状态（0正常 1异常）',
   error_msg         varchar(2000)   default ''                 comment '错误消息',
   oper_time         datetime                                   comment '操作时间',
